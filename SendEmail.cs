@@ -170,7 +170,6 @@ namespace SendEmail
                 horizontal += 60;
                 lbl.BackgroundImageLayout = ImageLayout.Stretch;
                 lbl.BackColor = Color.Transparent;
-                lbl.Font = new Font("Calibri", 11);
                 AttachmentList_panel.Controls.Add(lbl);
             }
         }
