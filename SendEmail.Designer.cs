@@ -265,6 +265,7 @@
             // 
             // AttachmentList_panel
             // 
+            this.AttachmentList_panel.AutoScroll = true;
             this.AttachmentList_panel.BackColor = System.Drawing.Color.Silver;
             this.AttachmentList_panel.BackgroundImage = global::SendEmail.Properties.Resources.attach_file_FILL0_wght400_GRAD0_opsz48;
             this.AttachmentList_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -272,6 +273,7 @@
             this.AttachmentList_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AttachmentList_panel.Location = new System.Drawing.Point(5, 308);
             this.AttachmentList_panel.Name = "AttachmentList_panel";
+            this.AttachmentList_panel.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.AttachmentList_panel.Size = new System.Drawing.Size(867, 60);
             this.AttachmentList_panel.TabIndex = 7;
             // 
@@ -338,6 +340,7 @@
             // 
             // Attachment_openFileDialog
             // 
+            this.Attachment_openFileDialog.Multiselect = true;
             this.Attachment_openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.Attachment_openFileDialog_FileOk);
             // 
             // SendEmail

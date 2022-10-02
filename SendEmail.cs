@@ -159,30 +159,29 @@ namespace SendEmail
 
         private void Attachment_openFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Label lbl = new Label();
-            lbl.Height = 30;
-            lbl.Width = 30;
-            lbl.BorderStyle = BorderStyle.Fixed3D;
-            lbl.BackgroundImage = Properties.Resources.check_circle_FILL0_wght400_GRAD0_opsz48;
-            lbl.Location = new Point(vertical, horizontal);
-            if (horizontal + 35 == AttachmentList_panel.Location.X)
+            foreach (String file in Attachment_openFileDialog.FileNames)
             {
-                vertical += 35;
-                horizontal = 5;
+                Label lbl = new Label();
+                lbl.Height = 50;
+                lbl.Width = 55;
+                lbl.BorderStyle = BorderStyle.Fixed3D;
+                lbl.BackgroundImage = Properties.Resources.check_circle_FILL0_wght400_GRAD0_opsz48;
+                lbl.Location = new Point(horizontal, vertical);
+                if (horizontal + 60 != AttachmentList_panel.Location.Y)
+                {
+                    horizontal += 60;
+                }
+                else
+                {
+                    vertical += 60;
+                    horizontal = 5;
+                }
+                lbl.BackgroundImageLayout = ImageLayout.Stretch;
+                lbl.BackColor = Color.Transparent;
+                lbl.Font = new Font("Calibri", 11);
+                AttachmentList_panel.Controls.Add(lbl);
+                //lbl.Margin = new Padding(3, 3, 3, 3);
             }
-            else
-            {
-                horizontal += 35;
-            }
-            if (vertical + 35 == AttachmentList_panel.Location.Y)
-            {
-                AttachmentList_panel.AutoScroll = true;
-            }
-            lbl.BackgroundImageLayout = ImageLayout.Stretch;
-            lbl.BackColor = Color.Transparent;
-            lbl.Font = new Font("Calibri", 11);
-            AttachmentList_panel.Controls.Add(lbl);
-
         }
     }
 }
