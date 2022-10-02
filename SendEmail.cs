@@ -9,6 +9,8 @@ namespace SendEmail
             InitializeComponent();
         }
         string EMailValidationStirng = @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$";
+        int vertical = 5;
+        int horizontal = 5;
         private void SendEmail_Load(object sender, EventArgs e)
         {
             foreach (FontFamily font in FontFamily.Families)
@@ -148,6 +150,39 @@ namespace SendEmail
         {
             Mail_richTextBox.Font = new Font(FontStyles_comboBox.Text, Mail_richTextBox.Font.Size);
             FontStyles_comboBox.Text = Mail_richTextBox.Font.Name.ToString();
+        }
+
+        private void Attachment_button_Click(object sender, EventArgs e)
+        {
+            Attachment_openFileDialog.ShowDialog();
+        }
+
+        private void Attachment_openFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Label lbl = new Label();
+            lbl.Height = 30;
+            lbl.Width = 30;
+            lbl.BorderStyle = BorderStyle.Fixed3D;
+            lbl.BackgroundImage = Properties.Resources.check_circle_FILL0_wght400_GRAD0_opsz48;
+            lbl.Location = new Point(vertical, horizontal);
+            if (horizontal + 35 == AttachmentList_panel.Location.X)
+            {
+                vertical += 35;
+                horizontal = 5;
+            }
+            else
+            {
+                horizontal += 35;
+            }
+            if (vertical + 35 == AttachmentList_panel.Location.Y)
+            {
+                AttachmentList_panel.AutoScroll = true;
+            }
+            lbl.BackgroundImageLayout = ImageLayout.Stretch;
+            lbl.BackColor = Color.Transparent;
+            lbl.Font = new Font("Calibri", 11);
+            AttachmentList_panel.Controls.Add(lbl);
+
         }
     }
 }

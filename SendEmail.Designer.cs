@@ -46,6 +46,7 @@
             this.Buttons_panel = new System.Windows.Forms.Panel();
             this.Mail_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AttachmentList_panel = new System.Windows.Forms.Panel();
             this.Mail_richTextBox = new System.Windows.Forms.RichTextBox();
             this.To_textBox = new System.Windows.Forms.TextBox();
             this.To_label = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@
             this.TargetEmail_errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.EmptyMail_errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.AttachmentList_panel = new System.Windows.Forms.Panel();
+            this.Attachment_openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.EmailPassword_panel.SuspendLayout();
             this.FormatingButtons_panel.SuspendLayout();
             this.Buttons_panel.SuspendLayout();
@@ -133,6 +134,7 @@
             this.Attachment_button.Size = new System.Drawing.Size(30, 30);
             this.Attachment_button.TabIndex = 8;
             this.Attachment_button.UseVisualStyleBackColor = true;
+            this.Attachment_button.Click += new System.EventHandler(this.Attachment_button_Click);
             // 
             // FormatingButtons_panel
             // 
@@ -258,8 +260,20 @@
             this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(877, 361);
+            this.panel1.Size = new System.Drawing.Size(877, 373);
             this.panel1.TabIndex = 7;
+            // 
+            // AttachmentList_panel
+            // 
+            this.AttachmentList_panel.BackColor = System.Drawing.Color.Silver;
+            this.AttachmentList_panel.BackgroundImage = global::SendEmail.Properties.Resources.attach_file_FILL0_wght400_GRAD0_opsz48;
+            this.AttachmentList_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.AttachmentList_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AttachmentList_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AttachmentList_panel.Location = new System.Drawing.Point(5, 308);
+            this.AttachmentList_panel.Name = "AttachmentList_panel";
+            this.AttachmentList_panel.Size = new System.Drawing.Size(867, 60);
+            this.AttachmentList_panel.TabIndex = 7;
             // 
             // Mail_richTextBox
             // 
@@ -267,7 +281,7 @@
             this.Mail_richTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Mail_richTextBox.Location = new System.Drawing.Point(5, 5);
             this.Mail_richTextBox.Name = "Mail_richTextBox";
-            this.Mail_richTextBox.Size = new System.Drawing.Size(867, 351);
+            this.Mail_richTextBox.Size = new System.Drawing.Size(867, 363);
             this.Mail_richTextBox.TabIndex = 6;
             this.Mail_richTextBox.Text = "";
             // 
@@ -322,13 +336,9 @@
             this.EmptyMail_errorProvider.ContainerControl = this;
             this.EmptyMail_errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("EmptyMail_errorProvider.Icon")));
             // 
-            // AttachmentList_panel
+            // Attachment_openFileDialog
             // 
-            this.AttachmentList_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AttachmentList_panel.Location = new System.Drawing.Point(5, 296);
-            this.AttachmentList_panel.Name = "AttachmentList_panel";
-            this.AttachmentList_panel.Size = new System.Drawing.Size(867, 60);
-            this.AttachmentList_panel.TabIndex = 7;
+            this.Attachment_openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.Attachment_openFileDialog_FileOk);
             // 
             // SendEmail
             // 
@@ -392,5 +402,6 @@
         private RichTextBox Mail_richTextBox;
         private Panel panel1;
         private Panel AttachmentList_panel;
+        private OpenFileDialog Attachment_openFileDialog;
     }
 }
