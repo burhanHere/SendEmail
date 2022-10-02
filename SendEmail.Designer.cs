@@ -143,9 +143,9 @@
             this.FormatingButtons_panel.Controls.Add(this.Italicize_button);
             this.FormatingButtons_panel.Controls.Add(this.BoldText_button);
             this.FormatingButtons_panel.Controls.Add(this.Attachment_button);
-            this.FormatingButtons_panel.Location = new System.Drawing.Point(3, 10);
+            this.FormatingButtons_panel.Location = new System.Drawing.Point(3, 7);
             this.FormatingButtons_panel.Name = "FormatingButtons_panel";
-            this.FormatingButtons_panel.Size = new System.Drawing.Size(308, 44);
+            this.FormatingButtons_panel.Size = new System.Drawing.Size(308, 45);
             this.FormatingButtons_panel.TabIndex = 7;
             // 
             // FontStyles_comboBox
@@ -212,13 +212,12 @@
             // 
             // Send_button
             // 
-            this.Send_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Send_button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Send_button.BackgroundImage = global::SendEmail.Properties.Resources.send_FILL0_wght400_GRAD0_opsz481;
             this.Send_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Send_button.Location = new System.Drawing.Point(833, 7);
+            this.Send_button.Location = new System.Drawing.Point(311, 7);
             this.Send_button.Name = "Send_button";
-            this.Send_button.Size = new System.Drawing.Size(50, 50);
+            this.Send_button.Size = new System.Drawing.Size(45, 45);
             this.Send_button.TabIndex = 13;
             this.Send_button.UseVisualStyleBackColor = true;
             this.Send_button.Click += new System.EventHandler(this.Send_button_Click);
@@ -231,9 +230,9 @@
             this.Buttons_panel.Controls.Add(this.Send_button);
             this.Buttons_panel.Controls.Add(this.FormatingButtons_panel);
             this.Buttons_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Buttons_panel.Location = new System.Drawing.Point(0, 526);
+            this.Buttons_panel.Location = new System.Drawing.Point(0, 536);
             this.Buttons_panel.Name = "Buttons_panel";
-            this.Buttons_panel.Size = new System.Drawing.Size(900, 65);
+            this.Buttons_panel.Size = new System.Drawing.Size(900, 55);
             this.Buttons_panel.TabIndex = 6;
             // 
             // Mail_panel
@@ -245,7 +244,7 @@
             this.Mail_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Mail_panel.Location = new System.Drawing.Point(0, 90);
             this.Mail_panel.Name = "Mail_panel";
-            this.Mail_panel.Size = new System.Drawing.Size(900, 436);
+            this.Mail_panel.Size = new System.Drawing.Size(900, 446);
             this.Mail_panel.TabIndex = 3;
             // 
             // panel1
@@ -258,7 +257,7 @@
             this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(877, 351);
+            this.panel1.Size = new System.Drawing.Size(877, 361);
             this.panel1.TabIndex = 7;
             // 
             // Mail_richTextBox
@@ -270,7 +269,7 @@
             this.Mail_richTextBox.Location = new System.Drawing.Point(5, 5);
             this.Mail_richTextBox.MinimumSize = new System.Drawing.Size(700, 300);
             this.Mail_richTextBox.Name = "Mail_richTextBox";
-            this.Mail_richTextBox.Size = new System.Drawing.Size(867, 341);
+            this.Mail_richTextBox.Size = new System.Drawing.Size(867, 351);
             this.Mail_richTextBox.TabIndex = 6;
             this.Mail_richTextBox.Text = "";
             // 
