@@ -167,20 +167,11 @@ namespace SendEmail
                 lbl.BorderStyle = BorderStyle.Fixed3D;
                 lbl.BackgroundImage = Properties.Resources.check_circle_FILL0_wght400_GRAD0_opsz48;
                 lbl.Location = new Point(horizontal, vertical);
-                if (horizontal + 60 != AttachmentList_panel.Location.Y)
-                {
-                    horizontal += 60;
-                }
-                else
-                {
-                    vertical += 60;
-                    horizontal = 5;
-                }
+                horizontal += 60;
                 lbl.BackgroundImageLayout = ImageLayout.Stretch;
                 lbl.BackColor = Color.Transparent;
                 lbl.Font = new Font("Calibri", 11);
                 AttachmentList_panel.Controls.Add(lbl);
-                //lbl.Margin = new Padding(3, 3, 3, 3);
             }
         }
     }
