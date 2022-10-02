@@ -16,7 +16,7 @@ namespace SendEmail
                 FontStyles_comboBox.Items.Add(font.Name.ToString());
             }
             Mail_richTextBox.Font = new Font(FontStyles_comboBox.Text, Mail_richTextBox.Font.Size);
-            FontStyles_comboBox.Text = Mail_richTextBox.Font.Name.ToString();
+            FontStyles_comboBox.Text = "Calibri";
             ColorPicker_button.BackColor = Mail_richTextBox.ForeColor;
         }
 
@@ -142,6 +142,12 @@ namespace SendEmail
             {
                 Mail_richTextBox.Font = new Font(Mail_richTextBox.Font.Name, Mail_richTextBox.Font.Size);
             }
+        }
+
+        private void FontStyles_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Mail_richTextBox.Font = new Font(FontStyles_comboBox.Text, Mail_richTextBox.Font.Size);
+            FontStyles_comboBox.Text = Mail_richTextBox.Font.Name.ToString();
         }
     }
 }
