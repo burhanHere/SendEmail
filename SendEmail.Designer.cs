@@ -54,6 +54,7 @@
             this.TargetEmail_errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.EmptyMail_errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.AttachmentList_panel = new System.Windows.Forms.Panel();
             this.EmailPassword_panel.SuspendLayout();
             this.FormatingButtons_panel.SuspendLayout();
             this.Buttons_panel.SuspendLayout();
@@ -224,7 +225,6 @@
             // 
             // Buttons_panel
             // 
-            this.Buttons_panel.AutoSize = true;
             this.Buttons_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Buttons_panel.BackColor = System.Drawing.Color.Transparent;
             this.Buttons_panel.Controls.Add(this.Send_button);
@@ -253,6 +253,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.AttachmentList_panel);
             this.panel1.Controls.Add(this.Mail_richTextBox);
             this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
@@ -262,12 +263,9 @@
             // 
             // Mail_richTextBox
             // 
-            this.Mail_richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mail_richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Mail_richTextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Mail_richTextBox.Location = new System.Drawing.Point(5, 5);
-            this.Mail_richTextBox.MinimumSize = new System.Drawing.Size(700, 300);
             this.Mail_richTextBox.Name = "Mail_richTextBox";
             this.Mail_richTextBox.Size = new System.Drawing.Size(867, 351);
             this.Mail_richTextBox.TabIndex = 6;
@@ -323,6 +321,14 @@
             this.EmptyMail_errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.EmptyMail_errorProvider.ContainerControl = this;
             this.EmptyMail_errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("EmptyMail_errorProvider.Icon")));
+            // 
+            // AttachmentList_panel
+            // 
+            this.AttachmentList_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AttachmentList_panel.Location = new System.Drawing.Point(5, 296);
+            this.AttachmentList_panel.Name = "AttachmentList_panel";
+            this.AttachmentList_panel.Size = new System.Drawing.Size(867, 60);
+            this.AttachmentList_panel.TabIndex = 7;
             // 
             // SendEmail
             // 
@@ -385,5 +391,6 @@
         private ColorDialog colorDialog1;
         private RichTextBox Mail_richTextBox;
         private Panel panel1;
+        private Panel AttachmentList_panel;
     }
 }
